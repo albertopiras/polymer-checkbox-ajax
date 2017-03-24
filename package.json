@@ -13,5 +13,11 @@
     "smart"
   ],
   "author": "Alberto Piras",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.6",
+    "paper-checkbox": "^0.10.0",
+    "typescript": "^2.2.1"
+  }
 }
