@@ -1,0 +1,17 @@
+{
+  "name": "checkbox-ajax",
+  "version": "1.0.0",
+  "description": "A Polymer Web Component that consists on a smart checkbox able to make a custom API call. ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Polymer",
+    "checkbox",
+    "ajax",
+    "smart"
+  ],
+  "author": "Alberto Piras",
+  "license": "MIT"
+}
