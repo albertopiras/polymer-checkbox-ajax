@@ -1,4 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkbox ajax Demo</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/app-layout/app-layout.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="checkbox-ajax.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+    <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
+    <link rel="import" href="bower_components/app-layout/app-header/app-header.html">
+    <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
+</head>
+
+<body>
 
 
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+        html,
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Noto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: #f1f1f1;
+            max-height: 368px;
+        }
+        
+        app-toolbar {
+            background-color: #4285f4;
+            color: #fff;
+        }
+        
+        paper-icon-button {
+            --paper-icon-button-ink-color: white;
+        }
+        
+        paper-icon-button+[main-title] {
+            margin-left: 24px;
+        }
+        
+        paper-progress {
+            display: block;
+            width: 100%;
+            --paper-progress-active-color: rgba(255, 255, 255, 0.5);
+            --paper-progress-container-color: transparent;
+        }
+        
+        app-header {
+            @apply(--layout-fixed-top);
+            color: #fff;
+            --app-header-background-rear-layer: {
+                background-color: #ef6c00;
+            }
+            ;
+        }
+        
+        app-drawer {
+            --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
+            --app-drawer-content-container: {
+                background-color: #B0BEC5;
+            }
+        }
+        
+        
+        #mainContainer {
+            padding-top: 70px;
+        }
+
+        .centerContent{
+           width: 50%;
+        }
+    </style>
+    <app-header reveals>
+        <app-toolbar fixed>
+            <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
+            <div main-title>Demo &lt;checkbox-ajax/&gt;</div>
+            <paper-icon-button icon="delete"></paper-icon-button>
+            <paper-icon-button icon="search"></paper-icon-button>
+            <paper-icon-button icon="close"></paper-icon-button>
+            <!--<paper-progress value="10" indeterminate bottom-item></paper-progress>-->
+        </app-toolbar>
+    </app-header>
+    <app-drawer id="drawer" swipe-open></app-drawer>
+
+    <div id="mainContainer">
+
+        <div class="center-justified layout horizontal">
+                <paper-material class="centerContent" elevation="1">
+                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
+                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
+                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
+                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
+                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
+                </paper-material>
+
+        </div>
 
 
+    </div>
+
+
+</body>
+
+</html>
