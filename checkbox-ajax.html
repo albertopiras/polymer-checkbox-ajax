@@ -1,0 +1,48 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/polymer-ts/polymer-ts.html">
+<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="bower_components/iron-icons/maps-icons.html">
+<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="bower_components/paper-material/paper-material.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/paper-styles/typography.html">
+
+
+<dom-module id="checkbox-ajax">
+  <template>
+    <style is="custom-style">
+      .flex-horizontal {
+        @apply(--layout-horizontal);
+      }
+      
+       :host {
+        display: flex;
+        width: 100%;
+      }
+      
+       ::content paper-checkbox {
+        --paper-checkbox-checked-color: var(--paper-blue-500);
+        --paper-checkbox-checked-ink-color: var(--paper-blue-500);
+        --paper-checkbox-unchecked-color: var(--paper-blue-500);
+        --paper-checkbox-unchecked-ink-color: var(--paper-blue-500);
+        --paper-checkbox-label-color: var(--paper-blue-500);
+        --paper-checkbox-label-checked-color: var(--paper-blue-500);
+      }
+
+    </style>
+    <iron-ajax id="checkboxAjaxRequest" bubbles="true" url="[[url]]" handle-as="json" method="POST" headers='{"Content-Type": "application/json"}'
+      on-request="startRequest" on-response="parseResponse" on-error="parseError" debounce-duration="300">
+    </iron-ajax>
+    <div class="flex-6">
+      <paper-checkbox noink id="checkboxAjax" class$="[[checkclass]]" value$=[[value]]> [[label]]</paper-checkbox>
+    </div>
+    <div class="flex-6">
+      <iron-icon hidden$="{{!isSuccess}}" icon="check" style="color:green"></iron-icon>
+      <iron-icon hidden$="{{!isError}}" icon="error-outline" style="color: red"></iron-icon>
+      <paper-spinner hidden$="{{!isLoading}}" active class="thin"></paper-spinner>
+    </div>
+  </template>
+</dom-module>
+
+<script type="text/javascript" src="http://localhost:5000/checkbox-ajax.js"></script>
