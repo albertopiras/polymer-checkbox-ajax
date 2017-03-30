@@ -16,11 +16,18 @@
         @apply(--layout-horizontal);
       }
       
+    
        :host {
         display: flex;
         width: 100%;
+        justify-content: space-between;
       }
       
+       ::content #checkboxContainer.paper-checkbox,
+       ::content iron-icon {
+        height: 1em;
+        width: 1em;
+      }
        ::content paper-checkbox {
         --paper-checkbox-checked-color: var(--paper-blue-500);
         --paper-checkbox-checked-ink-color: var(--paper-blue-500);
