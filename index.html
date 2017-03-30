@@ -18,7 +18,7 @@
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 
 <body>
@@ -70,6 +70,12 @@
             }
         }
         
+        h1{
+            font-family: 'Gloria Hallelujah', cursive;
+            text-align: center;
+            font-size: 3rem;
+            color: #4285f4;
+        }
         
         #mainContainer {
             padding-top: 70px;
@@ -78,6 +84,11 @@
         .centerContent{
            width: 50%;
         }
+
+        .accentColor{
+            color: #10469e;
+        }
+
     </style>
     <app-header reveals>
         <app-toolbar fixed>
@@ -89,9 +100,11 @@
             <!--<paper-progress value="10" indeterminate bottom-item></paper-progress>-->
         </app-toolbar>
     </app-header>
-    <app-drawer id="drawer" swipe-open></app-drawer>
+    <!--<app-drawer id="drawer" swipe-open></app-drawer>-->
 
     <div id="mainContainer">
+
+        <h1><span class="accentColor">&lt;checkbox-ajax/&gt;</span> Demo!</h1>
 
         <div class="center-justified layout horizontal">
                 <paper-material class="centerContent" elevation="1">
@@ -101,9 +114,7 @@
                     <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
                     <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
                 </paper-material>
-
         </div>
-
 
     </div>
 
