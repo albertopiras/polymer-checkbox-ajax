@@ -16,7 +16,6 @@
         @apply(--layout-horizontal);
       }
       
-    
        :host {
         display: flex;
         width: 100%;
@@ -28,6 +27,13 @@
         height: 1em;
         width: 1em;
       }
+      
+      ::content #checkbox.paper-checkbox {
+        border-width: .123em;
+        border-style: solid;
+        border-color: #2196f3;
+      }
+      
        ::content paper-checkbox {
         --paper-checkbox-checked-color: var(--paper-blue-500);
         --paper-checkbox-checked-ink-color: var(--paper-blue-500);
@@ -36,7 +42,6 @@
         --paper-checkbox-label-color: var(--paper-blue-500);
         --paper-checkbox-label-checked-color: var(--paper-blue-500);
       }
-
     </style>
     <iron-ajax id="checkboxAjaxRequest" bubbles="true" url="[[url]]" handle-as="json" method="POST" headers='{"Content-Type": "application/json"}'
       on-request="startRequest" on-response="parseResponse" on-error="parseError" debounce-duration="300">
