@@ -10,15 +10,15 @@
     <link rel="import" href="bower_components/app-layout/app-layout.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-progress/paper-progress.html">
-    <link rel="import" href="checkbox-ajax.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
     <link rel="import" href="bower_components/app-layout/app-header/app-header.html">
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="import" href="checkbox-ajax.html">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 
 <body>
@@ -70,7 +70,7 @@
             }
         }
         
-        h1{
+        h1 {
             font-family: 'Gloria Hallelujah', cursive;
             text-align: center;
             font-size: 3rem;
@@ -80,15 +80,27 @@
         #mainContainer {
             padding-top: 70px;
         }
-
-        .centerContent{
-               min-width: 300px;
-               font-size: 2rem;
+        
+        .centerContent {
+            min-width: 300px;
+            font-size: 2rem;
+            background: #ffffff;
+            padding: 2em;
         }
-
-        .accentColor{
+        
+        .accentColor {
             color: #10469e;
         }
+
+        checkbox-ajax{
+            margin-bottom: 1rem;
+        }
+ paper-button{
+
+    background: #10469e;
+    color: #ffffff;
+    margin-top: 1em;
+    }
 
     </style>
     <app-header reveals>
@@ -108,13 +120,17 @@
         <h1><span class="accentColor">&lt;checkbox-ajax/&gt;</span> Demo!</h1>
 
         <div class="center-justified layout horizontal">
-                <paper-material class="centerContent" elevation="1">
-                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
-                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
-                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
-                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
-                    <checkbox-ajax class="customcheck" url="www.google.com" label="Ciccio" value="001" checkclass=""></checkbox-ajax>
-                </paper-material>
+            <paper-material class="centerContent" elevation="1">
+                <checkbox-ajax class="customcheck" url="www.google.com" label="Turn on Lights" value="001" checkclass=""></checkbox-ajax>
+                <checkbox-ajax class="customcheck" url="www.google.com" label="Activate House Alarm" value="001" checkclass=""></checkbox-ajax>
+                <checkbox-ajax class="customcheck" url="www.google.com" label="Close windows" value="001" checkclass=""></checkbox-ajax>
+                <checkbox-ajax class="customcheck" url="www.google.com" label="Start Washing machine" value="001" checkclass=""></checkbox-ajax>
+                <checkbox-ajax class="customcheck" url="www.google.com" label="Lawn watering" value="001" checkclass=""></checkbox-ajax>
+                <div class="inputLine layout horizontal center">
+                    <paper-button raised disabled$={{}}>Start Selected Tasks</paper-button>
+                </div>
+            </paper-material>
+
         </div>
 
     </div>
