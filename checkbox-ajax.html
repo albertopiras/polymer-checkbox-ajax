@@ -43,7 +43,7 @@
         --paper-checkbox-label-checked-color: var(--paper-blue-500);
       }
     </style>
-    <iron-ajax id="checkboxAjaxRequest" bubbles="true" url="[[url]]" handle-as="json" method="POST" headers='{"Content-Type": "application/json"}'
+    <iron-ajax id="checkboxAjaxRequest" bubbles="true" url="[[url]]" handle-as="json" method="[[APIMethod]]" headers='{"Content-Type": "application/json"}'
       on-request="startRequest" on-response="parseResponse" on-error="parseError" debounce-duration="300">
     </iron-ajax>
     <div class="flex-6">
@@ -57,4 +57,4 @@
   </template>
 </dom-module>
 
-<script type="text/javascript" src="http://localhost:5000/checkbox-ajax.js"></script>
+<script type="text/javascript" src="checkbox-ajax.js"></script>
