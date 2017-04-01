@@ -17,125 +17,144 @@
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-styles/typography.html">
+
     <link rel="import" href="checkbox-ajax.html">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 
 <body>
 
+    <dom-module id="demo-checkbox-ajax">
+        <template>
+            <style is="custom-style" include="iron-flex iron-flex-alignment">
 
-    <style is="custom-style" include="iron-flex iron-flex-alignment">
-        html,
-        body {
-            margin: 0;
-            font-family: 'Roboto', 'Noto', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            background: #f1f1f1;
-            max-height: 368px;
-        }
-        
-        app-toolbar {
-            background-color: #4285f4;
-            color: #fff;
-        }
-        
-        paper-icon-button {
-            --paper-icon-button-ink-color: white;
-        }
-        
-        paper-icon-button+[main-title] {
-            margin-left: 24px;
-        }
-        
-        paper-progress {
-            display: block;
-            width: 100%;
-            --paper-progress-active-color: rgba(255, 255, 255, 0.5);
-            --paper-progress-container-color: transparent;
-        }
-        
-        app-header {
-            @apply(--layout-fixed-top);
-            color: #fff;
-            --app-header-background-rear-layer: {
-                background-color: #ef6c00;
-            }
-            ;
-        }
-        
-        app-drawer {
-            --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
-            --app-drawer-content-container: {
-                background-color: #B0BEC5;
-            }
-        }
-        
-        h1 {
-            font-family: 'Gloria Hallelujah', cursive;
-            text-align: center;
-            font-size: 3rem;
-            color: #4285f4;
-        }
-        
-        #mainContainer {
-            padding-top: 70px;
-        }
-        
-        .centerContent {
-            min-width: 300px;
-            font-size: 2rem;
-            background: #ffffff;
-            padding: 2em;
-        }
-        
-        .accentColor {
-            color: #10469e;
-        }
+                html,
+                body {
+                    margin: 0;
+                    -webkit-font-smoothing: antialiased;
+                    background: #f1f1f1;
+                    max-height: 368px;
+                }
+                
+                app-toolbar {
+                    background-color: #4285f4;
+                    color: #fff;
+                    font-family: 'Roboto', 'Noto', sans-serif;
+                }
+                
+                paper-icon-button {
+                    --paper-icon-button-ink-color: white;
+                }
+                
+                paper-icon-button+[main-title] {
+                    margin-left: 24px;
+                }
+                
+                paper-progress {
+                    display: block;
+                    width: 100%;
+                    --paper-progress-active-color: rgba(255, 255, 255, 0.5);
+                    --paper-progress-container-color: transparent;
+                }
+                
+                app-header {
+                    @apply(--layout-fixed-top);
+                    color: #fff;
+                    --app-header-background-rear-layer: {
+                        background-color: #ef6c00;
+                    }
+                }
+                
+                app-drawer {
+                    --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
+                    --app-drawer-content-container: {
+                        background-color: #B0BEC5;
+                    }
+                }
+                
+                h1 {
+                    font-family: 'Gloria Hallelujah', cursive;
+                    text-align: center;
+                    font-size: 3rem;
+                    color: #4285f4;
+                }
+                
+                #mainContainer {
+                    padding-top: 70px;
+                }
+                
+                .centerContent {
+                    min-width: 300px;
+                    font-size: 2rem;
+                    background: #ffffff;
+                    padding: 2em;
+                    margin-bottom: 3rem;
+                }
+                
+                .accentColor {
+                    color: #10469e;
+                }
+                
+                checkbox-ajax {
+                    margin-bottom: 1rem;
+                }
+                
+                paper-button {
+                    background: #10469e;
+                    color: #ffffff;
+                    margin-top: 1rem;
+                    font-size: 1.4rem;
+                }
+                
+                app-header {
+                    z-index: 400;
+                }
 
-        checkbox-ajax{
-            margin-bottom: 1rem;
-        }
- paper-button{
+            </style>
 
-    background: #10469e;
-    color: #ffffff;
-    margin-top: 1em;
-    }
+            <app-header reveals>
+                <app-toolbar fixed>
+                    <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
+                    <div main-title>Polymer Elements&#32;&lt;checkbox-ajax/&gt;</div>
+                    <paper-icon-button icon="delete"></paper-icon-button>
+                    <paper-icon-button icon="search"></paper-icon-button>
+                    <paper-icon-button icon="close"></paper-icon-button>
+                    <!--<paper-progress value="10" indeterminate bottom-item></paper-progress>-->
+                </app-toolbar>
+            </app-header>
 
-    </style>
-    <app-header reveals>
-        <app-toolbar fixed>
-            <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
-            <div main-title>Demo &lt;checkbox-ajax/&gt;</div>
-            <paper-icon-button icon="delete"></paper-icon-button>
-            <paper-icon-button icon="search"></paper-icon-button>
-            <paper-icon-button icon="close"></paper-icon-button>
-            <!--<paper-progress value="10" indeterminate bottom-item></paper-progress>-->
-        </app-toolbar>
-    </app-header>
-    <!--<app-drawer id="drawer" swipe-open></app-drawer>-->
+            <div id="mainContainer">
 
-    <div id="mainContainer">
+                <h1><span class="accentColor">&lt;checkbox-ajax/&gt;</span> Demo!</h1>
 
-        <h1><span class="accentColor">&lt;checkbox-ajax/&gt;</span> Demo!</h1>
+                <div class="center-justified layout horizontal">
+                    <paper-material class="centerContent" elevation="3">
+                        <checkbox-ajax class="customcheck" url="https://apis.google.com/" APIBody="" APIMethod="GET" label="Turn on Lights" value="001"
+                            checkclass=""></checkbox-ajax>
+                        <checkbox-ajax class="customcheck" url="resource-example-for-API.json" APIBody="" APIMethod="GET" label="Activate House Alarm"
+                            value="001" checkclass=""></checkbox-ajax>
+                        <checkbox-ajax class="customcheck" url="resource-example-for-API.json" APIBody="" APIMethod="GET" label="Close windows" value="001"
+                            checkclass=""></checkbox-ajax>
+                        <checkbox-ajax class="customcheck" url="https://github.com/Alberto-/repositories" APIBody="" APIMethod="GET" label="Start Washing machine"
+                            value="001" checkclass=""></checkbox-ajax>
+                        <checkbox-ajax class="customcheck" url="resource-example-for-API.json" APIBody="" APIMethod="GET" label="Lawn watering" value="001"
+                            checkclass=""></checkbox-ajax>
+                        <div class="inputLine horizontal  layout center-justified">
+                            <paper-button id="runTasksButton" raised disabled$={{}}>Start Selected Tasks</paper-button>
+                        </div>
+                    </paper-material>
 
-        <div class="center-justified layout horizontal">
-            <paper-material class="centerContent" elevation="1">
-                <checkbox-ajax class="customcheck" url="www.google.com" label="Turn on Lights" value="001" checkclass=""></checkbox-ajax>
-                <checkbox-ajax class="customcheck" url="www.google.com" label="Activate House Alarm" value="001" checkclass=""></checkbox-ajax>
-                <checkbox-ajax class="customcheck" url="www.google.com" label="Close windows" value="001" checkclass=""></checkbox-ajax>
-                <checkbox-ajax class="customcheck" url="www.google.com" label="Start Washing machine" value="001" checkclass=""></checkbox-ajax>
-                <checkbox-ajax class="customcheck" url="www.google.com" label="Lawn watering" value="001" checkclass=""></checkbox-ajax>
-                <div class="inputLine layout horizontal center">
-                    <paper-button raised disabled$={{}}>Start Selected Tasks</paper-button>
                 </div>
-            </paper-material>
 
-        </div>
+            </div>
 
-    </div>
+        </template>
+        <script type="text/javascript" src="demo-checkbox-ajax.js"></script>
+    </dom-module>
 
 
+    <<demo-checkbox-ajax></demo-checkbox-ajax>
 </body>
 
 </html>
