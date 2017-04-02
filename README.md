@@ -8,7 +8,7 @@ The size of the checkbox, the label and icons will follow the size of the parent
 ## Installation
 
 ```
-$ git clone https://github.com/Alberto-/checkboxaxaj.git
+$ git clone https://github.com/Alberto-/checkbox-ajax.git
 ```
 
 From project root `(
@@ -19,18 +19,11 @@ Prerequisites: node
 ```
 $ npm install
 ```
-this will download all npm and bower required packages
+"npm install" will download all **npm** and **bower** required packages
 
-```
-$ npm build
-```
-this will transpile TS files into js files with a gulp task
+It will also transpile Typescript files into js files with a **gulp** task.
 
 
-```
-$ npm start
-```
-This runs the demo page with a local http server.
 
 
 
@@ -39,11 +32,9 @@ This runs the demo page with a local http server.
 ```
 $ npm start
 ```
+"npm start" will automatically start a local server to run the demo.
 
-Angular Dashboard will run on http://localhost:8000/app
-
-
-The app will run on localhost:5000
+The Demo app will run on localhost:5000
 
 ### Version
 1.0 
@@ -53,4 +44,4 @@ The app will run on localhost:5000
 MIT 
 
 
-[view demo]: <http://apiras.rhcloud.com/app/>
+[view demo]: <http://apiras.rhcloud.com/polymer/checkbox-ajax>
