@@ -4,7 +4,7 @@
   "description": "A Polymer Web Component that consists on a smart checkbox able to make a custom API call. ",
   "main": "index.html",
   "scripts": {
-    "preinstall": "gulp transpile",
+    "prestart": "gulp transpile",
     "postinstall": "bower install",
     "start": "./node_modules/.bin/http-server -a 0.0.0.0 -p 8000"
 

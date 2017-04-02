@@ -21,18 +21,15 @@ $ npm install
 ```
 "npm install" will download all **npm** and **bower** required packages
 
-It will also transpile Typescript files into js files with a **gulp** task.
-
-
-
-
 
 ### Run
 
 ```
 $ npm start
 ```
-"npm start" will automatically start a local server to run the demo.
+
+"npm start" will  transpile Typescript files into js files with a **gulp** task.
+Then it will start a local server to run the demo.
 
 The Demo app will run on localhost:5000
 
