@@ -8,7 +8,7 @@ The size of the checkbox, the label and icons will follow the size of the parent
 ## Installation
 
 ```
-$ git clone https://github.com/Alberto-/checkbox-ajax.git
+$ git clone https://github.com/Alberto-/polymer-checkbox-ajax.git
 ```
 
 From project root `(
@@ -41,4 +41,4 @@ The Demo app will run on localhost:5000
 MIT 
 
 
-[view demo]: <http://apiras.rhcloud.com/polymer/checkbox-ajax>
+[view demo]: <http://albertopiras-enta.rhcloud.com/polymer-checkbox-ajax>
