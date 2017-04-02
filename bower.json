@@ -1,6 +1,6 @@
 {
   "name": "checkbox-ajax",
-  "description": "A Polymer Web Component that consists on a smart checkbox able to make a custom API call.",
+  "description": "A Polymer Web Component that consists on a smart checkbox able to make custom API calls and show a graphical response to the user",
   "main": "checkbox-ajax.html",
   "authors": [
     "Alberto Piras"
@@ -10,7 +10,11 @@
     "Polymer",
     "checkbox",
     "ajax",
-    "smart"
+    "smart",
+    "Iot",
+    "webComponents",
+    "javascript",
+    "typescript"
   ],
   "private": true,
   "ignore": [
