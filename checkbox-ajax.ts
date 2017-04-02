@@ -18,10 +18,10 @@ class CheckboxAjax extends polymer.Base {
   @property({ type: String, notify: true })
   checkclass: string;
 
-@property({ type: String, notify: true })
+  @property({ type: String, notify: true })
   APIBody: string;
 
-@property({ type: String, notify: true })
+  @property({ type: String, notify: true })
   APIMethod: string;
 
   @property({ type: String, notify: true })
@@ -72,11 +72,11 @@ class CheckboxAjax extends polymer.Base {
 
   public startAjax() {
     console.log("start ajax for " + this.url);
-    if(this.APIMethod){
+    if (this.APIMethod) {
       this.$.checkboxAjaxRequest.body = this.APIBody;
     }
     let ajaxRequest: any = this.$.checkboxAjaxRequest;
-    
+
     ajaxRequest.generateRequest();
   }
 
@@ -100,7 +100,7 @@ class CheckboxAjax extends polymer.Base {
     console.log(this['is'] + "Error running task");
   }
 
-  public cleanAjax(){
+  public cleanAjax() {
     this.isSuccess = false;
     this.isError = false;
     this.isLoading = false;
