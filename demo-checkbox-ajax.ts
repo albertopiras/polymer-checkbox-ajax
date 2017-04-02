@@ -1,5 +1,11 @@
 /// <reference path="bower_components/polymer-ts/polymer-ts.d.ts"/>
 
+/**
+ * TypeScript code for checkbox-ajax demo
+ *
+ * @author Alberto Piras
+ */
+
 @component('demo-checkbox-ajax')
 class DemoCheckboxAjax extends polymer.Base {
 
