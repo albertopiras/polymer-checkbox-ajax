@@ -5,6 +5,8 @@ checkbox-ajax is a Polymer Web Component written in Typescript that consists on 
 The size of the checkbox, the label and icons will follow the size of the parent component, thanks relative sizes.
 
 
+ [view demo]
+
 ## Installation
 
 ```
@@ -32,6 +34,8 @@ $ npm start
 Then it will start a local server to run the demo.
 
 The Demo app will run on localhost:5000
+
+ [view demo]
 
 ### Version
 1.0 
