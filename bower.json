@@ -1,0 +1,44 @@
+{
+  "name": "checkbox-ajax",
+  "description": "A Polymer Web Component that consists on a smart checkbox able to make custom API calls and show a graphical response to the user",
+  "main": "checkbox-ajax.html",
+  "authors": [
+    "Alberto Piras"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Polymer",
+    "checkbox",
+    "ajax",
+    "smart",
+    "Iot",
+    "webComponents",
+    "javascript",
+    "typescript"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-ajax": "^1.4.3",
+    "paper-spinner": "^1.2.1",
+    "iron-icons": "^1.2.0",
+    "polymer-ts": "^0.1.29",
+    "paper-checkbox": "^1.4.2",
+    "paper-material": "^1.0.6",
+    "iron-flex-layout": "^1.3.2",
+    "paper-styles": "^1.2.0",
+    "paper-toolbar": "^1.1.7",
+    "paper-scroll-header-panel": "^1.0.16",
+    "app-layout": "PolymerElements/app-layout#^0.10.7",
+    "paper-icon-button": "^1.1.4",
+    "paper-progress": "^1.0.11",
+    "paper-button": "PolymerElements/paper-button#^1.0.14"
+  }
+}
