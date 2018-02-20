@@ -30,10 +30,10 @@ $ npm install
 $ npm start
 ```
 
-"npm start" will  transpile Typescript files into js files with a **gulp** task.
+"npm start" will  transpile Typescript files into js files with a **gulp** task ('gulp transpile').
 Then it will start a local server to run the demo.
 
-The Demo app will run on localhost:5000
+The Demo app will run on `localhost:8000`
 
  [view demo]
 
@@ -45,4 +45,4 @@ The Demo app will run on localhost:5000
 MIT 
 
 
-[view demo]: <http://albertopiras-enta.rhcloud.com/polymer-checkbox-ajax>
+[view demo]: <http://albertopiras.github.io/polymer-checkbox-ajax>
